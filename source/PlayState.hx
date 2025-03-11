@@ -4,8 +4,13 @@ import flixel.FlxState;
 
 class PlayState extends FlxState
 {
+	var cursor:Cursor;
+
 	override public function create()
 	{
+		cursor = new Cursor();
+		add(cursor);
+
 		super.create();
 	}
 
