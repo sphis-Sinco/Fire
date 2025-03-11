@@ -8,6 +8,8 @@ class PlayState extends FlxState
 
 	override public function create()
 	{
+		FlxG.mouse.visible = false;
+
 		cursor = new Cursor();
 		add(cursor);
 
@@ -17,5 +19,6 @@ class PlayState extends FlxState
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
+		cursor.setPosition(FlxG.mouse.x, FlxG.mouse.y);
 	}
 }
